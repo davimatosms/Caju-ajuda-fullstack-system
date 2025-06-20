@@ -1,0 +1,77 @@
+# ===================================================================
+# Arquivo .gitignore completo para projetos Java / Spring Boot / Maven
+# ===================================================================
+
+# Arquivos de Log
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Saída de Build e Artefatos Gerados
+target/
+*.jar
+*.war
+*.ear
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+
+# Arquivos compilados do Java
+*.class
+
+# Logs de Crash da JVM
+hs_err_pid*
+
+# Arquivos do BlueJ
+*.ctxt
+
+# Arquivos do Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# =================================================
+# Arquivos específicos de Sistemas Operacionais
+# =================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# =================================================
+# Arquivos específicos de IDEs
+# =================================================
+
+### IntelliJ IDEA ###
+.idea/
+*.iml
+*.iws
+out/
+
+### STS / Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+### VS Code ###
+.vscode/
