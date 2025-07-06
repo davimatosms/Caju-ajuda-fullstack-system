@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" th:fragment="navbar">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="30" height="30" class="d-inline-block align-text-top me-2">
+                <defs><linearGradient id="cajuGradient" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" /><stop offset="100%" style="stop-color:#ef4444;stop-opacity:1" /></linearGradient></defs>
+                <path fill="url(#cajuGradient)" d="M85,30 C85,16.2 73.8,5 60,5 C46.2,5 35,16.2 35,30 C35,43.8 46.2,55 60,55 C63.8,55 67.3,54.3 70.4,53.1 C73.5,58.5 70.8,66.5 65.2,70.7 C75.5,69.4 83.1,60.6 84.5,50 C84.8,43.4 85,36.7 85,30 Z"></path>
+                <path fill="#22c55e" d="M36.1,33.5 C36.1,33.5 45.4,22.5 56.1,22.5 C66.8,22.5 71.9,32.7 71.9,32.7 C71.9,32.7 65.2,38.6 56.1,38.6 C47,38.6 36.1,33.5 36.1,33.5 Z" transform="rotate(-45 59 30.5)"></path>
+            </svg>
+            Caju Ajuda
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/chamados/meus}">Meus Chamados</a>
+                </li>
+            </ul>
+            <form id="logoutForm" th:action="@{/logout}" method="post" class="d-flex">
+                <button class="btn btn-outline-danger" type="button" data-bs-toggle="modal" data-bs-target="#confirmLogoutModal">Sair</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+<div class="modal fade" id="confirmLogoutModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true" th:fragment="logout-modal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalLabel">Confirmação de Saída</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Você tem certeza que deseja sair do sistema?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-danger" form="logoutForm">Sim, Sair</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer class="footer" th:fragment="footer">
+    <p>CajuGo. Seu dinheiro, no seu ritmo.</p>
+</footer>
+
+
+<div th:fragment="scripts">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+/* Estilos para a página de Novo Chamado - Caju Ajuda */
+
+/* Importa a fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Variáveis de Cores da Marca CajuGo */
+:root {
+    --caju-primary: #f59e0b; /* Laranja-amarelado vibrante do caju */
+    --caju-secondary: #ef4444; /* Vermelho-quente do caju */
+    --caju-leaf: #22c55e; /* Verde da folha/castanha */
+    --text-dark: #2d3748;
+    --text-light: #718096;
+    --bg-light: #f7fafc; /* Fundo geral da página */
+    --border-color: #e2e8f0;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* O conteúdo principal cresce para empurrar o rodapé para baixo */
+main {
+    flex: 1 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Estilo da barra de navegação */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0, .08);
+}
+
+/* Card que envolve o formulário */
+.form-card {
+    background-color: var(--white);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    box-shadow: 0 8px 30px rgba(0,0,0, .05);
+}
+
+.form-card h1 {
+    font-weight: 600;
+}
+
+.form-card .lead {
+    color: var(--text-light);
+}
+
+.form-group label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--caju-primary);
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.25);
+}
+
+/* Botão de Enviar */
+.btn-primary {
+    background-color: var(--caju-primary);
+    border-color: var(--caju-primary);
+    font-weight: 600;
+    padding: 0.75rem 1.25rem;
+}
+
+.btn-primary:hover {
+    background-color: #fb923c; /* Laranja mais claro */
+    border-color: #fb923c;
+}
+
+/* Rodapé */
+.footer {
+    flex-shrink: 0;
+    padding: 1.5rem 0;
+    background-color: var(--white);
+    text-align: center;
+    color: var(--text-light);
+    font-size: 14px;
+    border-top: 1px solid var(--border-color);
+}

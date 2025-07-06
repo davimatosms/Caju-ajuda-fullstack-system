@@ -1,68 +1,80 @@
+/* Estilos para a página de Login - Caju Ajuda */
+
+/* Importa a fonte do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
+/* Variáveis de Cores da Marca CajuGo */
+:root {
+    --caju-primary: #f59e0b; /* Laranja-amarelado vibrante do caju */
+    --caju-secondary: #ef4444; /* Vermelho-quente do caju */
+    --caju-leaf: #22c55e; /* Verde da folha/castanha */
+    --text-dark: #2d3748; /* Grafite para textos */
+    --text-light: #718096; /* Cinza claro para textos secundários */
+    --bg-light: #f7fafc; /* Fundo geral da página */
+    --border-color: #e2e8f0;
+}
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f0f2f5;
+    background-color: var(--bg-light);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
 }
-
 
 .login-container {
     background-color: #ffffff;
     padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     width: 100%;
     max-width: 400px;
     text-align: center;
 }
 
+.logo {
+    margin-bottom: 1rem;
+}
 
 h2 {
-    color: #333;
-    margin-bottom: 25px;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
     font-weight: 600;
 }
 
-
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     text-align: left;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
     font-weight: 500;
-    color: #555;
+    color: var(--text-light);
 }
-
 
 .form-group input {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
     border-radius: 8px;
-    box-sizing: border-box;
     font-size: 16px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-
 .form-group input:focus {
     outline: none;
-    border-color: #8bc34a; /* Sua cor verde */
-    box-shadow: 0 0 0 3px rgba(139, 195, 74, 0.2);
+    border-color: var(--caju-primary);
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2);
 }
 
-
 .btn-submit {
-    background-color: #8bc34a; /* Sua cor verde */
+    background-image: linear-gradient(to right, var(--caju-primary), var(--caju-secondary));
     color: #fff;
     padding: 12px 20px;
     border: none;
@@ -71,33 +83,34 @@ h2 {
     font-size: 16px;
     font-weight: 600;
     width: 100%;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.2);
 }
-
 
 .btn-submit:hover {
-    background-color: #7cb342;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(245, 158, 11, 0.3);
 }
 
-
 .register-link {
-    margin-top: 25px;
+    margin-top: 1.5rem;
     font-size: 14px;
+    color: var(--text-light);
 }
 
 .register-link a {
-    color: #7cb342;
+    color: var(--caju-primary);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .register-link a:hover {
     text-decoration: underline;
 }
 
-
-.alert {
-    padding: 10px 15px;
-    font-size: 14px;
-}
+.footer {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width:

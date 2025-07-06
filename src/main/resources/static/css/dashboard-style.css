@@ -1,0 +1,123 @@
+/* Importa a fonte e as variáveis de cor */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --caju-primary: #f97316; /* Laranja do CajuGo */
+    --caju-secondary: #ef4444; /* Vermelho do CajuGo */
+    --caju-leaf: #22c55e;
+    --text-dark: #1a202c;
+    --text-light: #a0aec0;
+    --bg-main: #f8f9fa;
+    --border-color: #dee2e6;
+    --white: #ffffff;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* --- ESTILO DA NAVBAR --- */
+.navbar {
+    background-color: var(--white) !important;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0,0,0, .04);
+}
+.navbar .navbar-brand {
+    padding: 0;
+}
+.navbar .nav-link {
+    font-weight: 500;
+    color: #4a5568;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.navbar .nav-link.active {
+    color: var(--caju-primary);
+}
+.navbar .btn-outline-danger {
+    border-color: var(--caju-secondary);
+    color: var(--caju-secondary);
+    font-weight: 500;
+}
+.navbar .btn-outline-danger:hover {
+    background-color: var(--caju-secondary);
+    color: var(--white);
+}
+
+/* --- ESTILO DOS CARDS E BOTÕES --- */
+.content-card {
+    background-color: var(--white);
+    border: none;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    box-shadow: 0 8px 30px rgba(0,0,0, .05);
+}
+
+.btn-primary {
+    background-color: var(--caju-primary);
+    border-color: var(--caju-primary);
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    padding: 0.75rem 1.5rem;
+}
+.btn-primary:hover {
+    background-color: #fb923c;
+    border-color: #fb923c;
+    transform: translateY(-2px);
+}
+.btn-secondary {
+    font-weight: 500;
+}
+.btn-icon .bi {
+    margin-right: 0.5rem;
+}
+
+/* --- TABELA DE CHAMADOS --- */
+.table {
+    border-collapse: separate;
+    border-spacing: 0 0.5rem;
+}
+.table thead th {
+    border: none;
+    color: var(--text-light);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+.table tbody tr {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px; /* Cantos arredondados nas linhas */
+}
+.table tbody tr:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0, .08);
+    transform: translateY(-2px);
+    transition: all 0.2s ease-in-out;
+}
+.table td, .table th {
+    border-top: none !important;
+}
+
+/* --- RODAPÉ --- */
+.footer {
+    flex-shrink: 0;
+    padding: 1.5rem 0;
+    background-color: var(--bg-main);
+    text-align: center;
+    color: var(--text-light);
+    font-size: 14px;
+}

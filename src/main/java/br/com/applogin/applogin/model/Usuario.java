@@ -1,9 +1,7 @@
 package br.com.applogin.applogin.model;
 
-
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
-import org.springframework.boot.autoconfigure.web.WebProperties;
 
 @Entity
 public class Usuario {
@@ -22,6 +20,11 @@ public class Usuario {
     @NotEmpty
     private String senha;
 
+    // CAMPO DE PERFIL QUE ESTAVA FALTANDO
+    @Enumerated(EnumType.STRING)
+    private UsuarioRole role;
+
+    // GETTERS E SETTERS
     public long getId() {
         return id;
     }
@@ -49,6 +52,13 @@ public class Usuario {
     public void setSenha(String senha) {
         this.senha = senha;
     }
+
+    // GETTER E SETTER PARA ROLE QUE ESTAVAM FALTANDO
+    public UsuarioRole getRole() {
+        return role;
+    }
+
+    public void setRole(UsuarioRole role) {
+        this.role = role;
+    }
 }
-
-
