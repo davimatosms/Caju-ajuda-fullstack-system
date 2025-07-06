@@ -1,4 +1,4 @@
-# Caju Ajuda - Sistema de Helpdesk Multiplataforma
+# 🥭 Caju Ajuda - Sistema de Helpdesk Multiplataforma
 
 ![image](https://github.com/user-attachments/assets/49e740f7-cbc6-4d99-bad2-e876f8ab5e52)
 
